@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <div class="row">
        <div class="col-xl-2 col-lg-8 col-sm-2 col-12 p-5" >
@@ -14,4 +14,4 @@
        </div>
      </div>
   </div>
-</template>
+</template> -->

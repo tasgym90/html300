@@ -1,13 +1,29 @@
 <script>
 
+// export default {
+//     name: 'foodImage',
+//     props: {//['foodImage']
+//       foodImage: Object,
+//       required: true,
+//     }
+//     // }
+//   }
+
 export default {
-    name: 'foodImage',
-    props: ['foodImage'] // , 'formInfo']
-    // components: {
-    //   foodImage,
-    //   formInfo
-    // }
-  }
+ props: {
+   foodImage: {
+     type: Object,
+     required: true,
+     validator: function (obj) {
+       return 'image' in obj &&
+              'title' in obj &&
+              'alt' in obj &&
+              'text' in obj &&
+              'idx' in obj
+     }
+   }
+ }
+}
 
 </script>
 

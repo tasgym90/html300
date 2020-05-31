@@ -1,6 +1,6 @@
 <script>
 import foodImage from './foodImage.vue';
-import formInfo from './foodImage.vue';
+// import formInfo from './foodImage.vue';
 
 
 var forms = [
@@ -28,23 +28,26 @@ var forms = [
 
 var images = [{
 
-      src: require('../assets/food3.jpg'),
-      title: 'Breakfast Scramble 1',
+      image: require('../assets/food3.jpg'),
+      title: 'Frozen frosty coffee drink',
       alt: 'breakfast scramble 1',
+      text: 'description about this delicious coffee thing',
       idx: 0
     },
     {
 
       image: require('../assets/food4.jpg'),
-      title: 'Breakfast Scramble 2',
+      title: 'Hippy dippy breakfast scramble',
       alt: 'breakfast scramble 2',
+      text: 'description about this delicious breakast scramble',
       idx: 1
     },
     {
 
       image: require('../assets/food5.jpg'),
-      title: 'Breakfast Scramble 3',
+      title: 'Banana splitz',
       alt: 'breakfast scramble 3',
+      text: 'description about this delicious banana splitz',
       idx: 2
 }]
 
@@ -62,45 +65,37 @@ export default {
     }
   }
 
-  // export default {
-  //   name: 'Page2',
-  //   data() {
-  //     return {
-  //       foodImages: images,
-  //       currentIdx: 0,
-  //       forminfos: form
-  //     }
-  //   }
-  // }
-
-console.log(foodImage)
-
 </script>
 
-<template>
-  <div>
-    <div v-for="x in foodImages" :key="blah">
-      <img :src="x.image" style="width: 18rem;">
-    </div>
-  </div>
 
+<template>
+<div v-if="foodImages">
+  <foodImage
+  v-for="foodImage in foodImages"
+  v-bind:foodImage="foodImage"
+  v-bind:key="foodImage.idx"
+  v-bind:src="foodImage.image"
+  v-bind:title="foodImage.title"
+  v-bind:alt="foodImage.alt"
+  v-bind:text="foodImage.text"
+  >
+  </foodImage>
+</div>
 </template>
 
-<!-- <template>
-  <div>
-    <div class="card-group p-5" v-for="(cardinfo, index) in cardinfos" :key="index">
-          <img :src="cardinfo.image" class="img-fluid m-5" style="width: 18rem;">
-          <!-- <img :src="cardinfo.image" class="img-fluid m-5" style="width: 18rem;">
-          <img :src="cardinfo.image" class="img-fluid m-5" style="width: 18rem;"> -->
-        <!-- </div>
 
-      <form>
-        <div class="form-group m-1 p-1" v-for="(forminfo, index) in forminfos">
-          <label for="forminfo.fname">{{forminfo.fname}}</label>
-          <input class="form-control" type="text" id="name" :placeholder="forminfo.placeholder">
+<!-- <template>
+<div>
+  <div class="col-sm-6 col-md-4 col-lg-3 mt-4" v-for="foodImage in foodImages" :key="foodImage.idx">
+    <div class="card m-5" style="width: 15rem;">
+      <img class="card-img-top" :src="foodImage.image" :alt="foodImage.alt">
+        <div class="card-body">
+          <h5 class="card-title">{{foodImage.title}}</h5>
+            <p class="card-text">{{foodImage.alt}}</p>
+            <a href="http://www.google.com" class="btn btn-primary">Go somewhere</a>
         </div>
-        <button type="button" class="btn btn-lg btn-danger m-2" data-toggle="popover" title="Popover title" data-content="Before you click submit, make sure you have double checked all of your info.">Submit</button>
-      </form> -->
-<!--
+    </div>
   </div>
+</div>
+
 </template> -->

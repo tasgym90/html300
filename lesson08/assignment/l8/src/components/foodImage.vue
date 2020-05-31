@@ -14,17 +14,17 @@ export default {
 <template>
 
   <div>
-    <div class="card-group p-5">
-      <img :src="foodImage__image">{{ foodImage.image}} >
+    <div class="col-sm-6 col-md-4 col-lg-3 mt-4" key="foodImage.idx">
+      <div class="card m-5" style="width: 15rem;">
+        <img class="card-img-top" :src="foodImage.image" :alt="foodImage.alt">
+          <div class="card-body">
+            <h5 class="card-title">{{foodImage.title}}</h5>
+              <p class="card-text">{{foodImage.text}}</p>
+              <a href="http://www.google.com" class="btn btn-primary">Go somewhere</a>
+          </div>
+      </div>
     </div>
-
-    <!-- <form>
-    <div class="form-group m-1 p-1" v-for="x in formInfos">
-      <label for="x.fname">{x.fname}}</label>
-      <input class="form-control" type="text" id="name" :placeholder="x.placeholder">
-    </div>
-    <button type="button" class="btn btn-lg btn-danger m-2" data-toggle="popover" title="Popover title" data-content="Before you click submit, make sure you have double checked all of your info.">Submit</button>
-
-      </form> -->
   </div>
+
+
 </template>

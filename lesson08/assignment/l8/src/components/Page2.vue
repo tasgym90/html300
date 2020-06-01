@@ -1,5 +1,7 @@
 <script>
 import foodImage from './foodImage.vue';
+import toggleShowHide from './foodImage.vue';
+import foodheader from './foodheader.vue';
 // import formInfo from './foodImage.vue';
 
 
@@ -53,10 +55,17 @@ var images = [{
 
 export default {
     name: 'Page2',
+    mixins: [toggleShowHide],
     components: {
-      foodImage
+      foodImage,
+      foodheader
       // formInfo,
     },
+    filters: {
+      Upper(value) {
+             return value.toUpperCase()
+      }
+   },
     data() {
       return {
         foodImages: images
@@ -67,9 +76,16 @@ export default {
 
 </script>
 
+<!-- Create a mixin for the image component that should toggle on/off a border around
+the image on click, apply the mixin to the image component. -->
 
 <template>
+
 <div v-if="foodImages">
+  <foodheader>
+    {{ "Food Header" | Upper }}
+  </foodheader>
+
   <foodImage
   v-for="foodImage in foodImages"
   v-bind:foodImage="foodImage"
@@ -78,6 +94,7 @@ export default {
   v-bind:title="foodImage.title"
   v-bind:alt="foodImage.alt"
   v-bind:text="foodImage.text"
+  @click.native="toggleShowHide"
   >
   </foodImage>
 </div>

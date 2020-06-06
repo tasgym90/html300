@@ -13,7 +13,7 @@
         <div class="card-body">
           <h5 class="card-title">{{cardinfo.title}}</h5>
           <p class="card-text">{{cardinfo.text}}</p>
-          <a href="http://www.google.com" class="btn btn-primary">Go somewhere</a>
+          <a href="http://www.google.com" class="btn btn-primary">See full recipe</a>
         </div>
       </div>
     </div>

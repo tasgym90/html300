@@ -20,12 +20,14 @@
       </div>
     </section> -->
 
-    <nav class="m-5">
-      <nuxt-link to="/" class="list-inline-item">Home</nuxt-link>
-      <nuxt-link to="/page2" class="list-inline-item">Page 2</nuxt-link>
-      <nuxt-link to="/page3" class="list-inline-item">Page 3</nuxt-link>
-      <nuxt-link to="/page4" class="list-inline-item">Page 4</nuxt-link>
-    </nav>
+    <div class="mb-3 navbar navbar-expand-lg">
+      <nav class="navbar-brand navbar-dark bg-light">
+        <nuxt-link to="/" class="list-inline-item">Home</nuxt-link>
+        <nuxt-link to="/page2" class="list-inline-item">Breakfast</nuxt-link>
+        <nuxt-link to="/page3" class="list-inline-item">Recipes</nuxt-link>
+        <nuxt-link to="/page4" class="list-inline-item">Nature</nuxt-link>
+      </nav>
+    </div>
 
     <main>
       <nuxt></nuxt>
@@ -48,6 +50,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+
+nav {
+  background-color: #D6DBDF;
+
 }
 
 .jumbotron {

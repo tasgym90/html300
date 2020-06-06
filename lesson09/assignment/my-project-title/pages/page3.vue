@@ -80,12 +80,12 @@
         	 .then(response => {
         	 	// console.log(response.data.results)
         	 	this.results = response.data.results
-        	 	console.log(this.results.length)
-        	 	console.log(this.results[0])
+        	 	// console.log(this.results.length)
+        	 	// console.log(this.results[0])
         	 })
         	 .catch(error => {
         	 	this.errored = true
-        	 	console.log(error)
+        	 	// console.log(error)
         	 })
         	 .then(() => (this.loading = false));
       }

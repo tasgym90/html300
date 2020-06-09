@@ -1,5 +1,8 @@
 
 export default {
+  router: {
+    base: '/my-project-title/'
+  },
   mode: 'universal',
   /*
   ** Headers of the page

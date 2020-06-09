@@ -63,8 +63,18 @@ export default {
         foodImages: images
         // formInfos: forms
       }
+    },
+
+  head () {
+    return {
+      meta: [{
+        name: 'description',
+        content:'My amazing food page'}],
     }
   }
+}
+
+
 </script>
 
 <!-- Create a mixin for the image component that should toggle on/off a border around

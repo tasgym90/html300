@@ -1,11 +1,13 @@
 <template>
   <div>
     <p class="display-1 m-5">Home</p>
-    <p class="lead m-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-      ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-      in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-      non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <p class="lead m-5"> Since moving to Seattle, cooking and exploring have been at the top of my priority list. As a flatlander from Minnesota,
+    The mountain views, deep green forests, and endless hiking opportunities are what make Seattle great. Additionally, since COVID-19 has put restaurant
+    going to a standstill, this Spoonacular API Generated website seemed particularly topical and relevant. This page site outlines some of Seattle's best
+    outdoor adventures, as well as provides you the fuel you need to make those big climbs. The API is set to return 5 pasta recipes with a link to their full
+    webiste, wine pairings, and more.
+
+    enjoy!
     </p>
     <div class="col-sm-6 col-md-4 col-lg-3 mt-4" v-for="(cardinfo, index) in cardinfos" :key="index">
       <div class="card m-5" style="width: 18rem;">
